@@ -14,6 +14,7 @@ from sys import argv
 #    2. 0: non-blocking mode, return immediately
 #    3. x, x is bigger than 0, float allowed, timeout block call
 
+# I should really make this a dictionary. It was transcribed from the C version and still looks bad...
 commandList = [\
 ['\x80\x70\xc0\x3f', 'Power On'     , ''],\
 ['\x80\x70\x9f\x60', 'Power Off'    , ''],\
