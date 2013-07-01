@@ -1,5 +1,7 @@
 #!/usr/bin/python
-killAllHumans = 0
+
+# This program as it stands controls a Harman Kardon AVR3650 receiver over RS-232 on /dev/ttyUSB0.
+# Make sure the receiver has 'RS-232 Control' set to 'On' in the main menu.
 
 import serial
 import time
