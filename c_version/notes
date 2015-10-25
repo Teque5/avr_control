@@ -1,1 +1,3 @@
-compile with gcc -fno-stack-protector
+This c_version of AVR control DOES NOT WORK for more modern AVR systems. Use the python script for that. This code only works for systems that take a 4 byte command scheme. Newer boxes use some initialization bytes and 2 checksum values.
+
+Compile with 'gcc -fno-stack-protector' to avoid errors.
