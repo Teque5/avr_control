@@ -1,10 +1,9 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 '''
-This program as it stands controls a Harman Kardon AVR3650 receiver over RS-232 on /dev/ttyUSB0.
+This program as it stands controls a Harman Kardon AVR3650 receiver over RS-232 on any serial port.
 Make sure the receiver has 'RS-232 Control' set to 'On' in the main menu.
 '''
-
 import serial
 import time
 from sys import argv, exit
@@ -106,10 +105,10 @@ def sendAVR(command, listen = False, port='/dev/ttyUSB0'):
         ser.open()
         assert ser.isOpen()
     except serial.SerialException as e:
-        print("SerialException({0}): {1}".format(e.errno, e.strerror))
+        print("SerialException: {0}".format(e))
         exit(1)
     except AssertionError as e:
-        print("AssertionError({0}): {1}".format(e.errno, e.strerror))
+        print("AssertionError: {0}".format(e))
         exit(1)
 
     ser.flushInput() #flush input buffer, discarding all its contents
