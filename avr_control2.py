@@ -83,10 +83,10 @@ commandList = [\
 ['\x82\x72\xd9\x26', 'Clear'        , ''],\
 ['\x82\x72\xd0\x2f', 'Preset Up +'  , '']]
 
-def sendAVR(command, listen = False):
+def sendAVR(command, listen = False, port='/dev/ttyUSB0'):
     print ':: Attempting to connect to AVR3650...'
     ser = serial.Serial()
-    ser.port = '/dev/ttyUSB0'
+    ser.port = port
     ser.baudrate = 57600                # found after exhaustive testing, FUCK
     ser.bytesize = serial.EIGHTBITS     #number of bits per bytes
     ser.parity = serial.PARITY_NONE     #set parity check: no parity
