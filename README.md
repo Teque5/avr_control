@@ -1,13 +1,15 @@
-avr_control
-===========
-
+# avr_control
 Serial interface control for Harman Kardon AVR home theater receivers.
 
-File List
-=========
-avr_control.py
+## File List
+
+### avr_control2.py
 --------------
-This version will control any modern Harman Kardon receiver including mine, the AVR3650.
+This python2 version will control any modern Harman Kardon receiver including mine, the AVR3650.
+
+### avr_control3.py
+--------------
+This python3 version will control any modern Harman Kardon receiver including mine, the AVR3650.
 
 c_version/
 ----------
