@@ -151,6 +151,7 @@ def sendAVR(command, listen = False, port='/dev/ttyUSB0'):
     #print(ser.readline())
     
     ser.close()
+    print('::','Done')
 
 if __name__ == '__main__':
     command_idx = int(argv[1])
