@@ -2,8 +2,8 @@
 Serial interface control for Harman Kardon AVR home theater receivers.
 
 ## Dependencies
-* python3 : pySerial
-* python2 : binascii
+* avr_control3 : pySerial
+* avr_control2 : binascii
 
 ## Usage
 ```
