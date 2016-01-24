@@ -4,6 +4,7 @@
 This program as it stands controls a Harman Kardon AVR3650 receiver over RS-232 on any serial port.
 Make sure the receiver has 'RS-232 Control' set to 'On' in the main menu.
 '''
+from __future__ import print_function, division
 import serial
 import time
 from sys import argv, exit
@@ -111,8 +112,8 @@ def sendAVR(command, listen = False, port='/dev/ttyUSB0'):
         print("AssertionError: {0}".format(e))
         exit(1)
 
-    ser.flushInput() #flush input buffer, discarding all its contents
-    ser.flushOutput()#flush output buffer, aborting current output 
+    ser.flushInput() 	#flush input buffer, discarding all its contents
+    ser.flushOutput()	#flush output buffer, aborting current output 
 
     ### Create Packet
     # Packet Structure & Example (taken from 'RS232 Protocol.pdf')
